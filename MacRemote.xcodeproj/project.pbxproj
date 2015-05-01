@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20F714781AF3662800E029BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F714771AF3662800E029BF /* AppDelegate.swift */; };
+		20F7147A1AF3662800E029BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F714791AF3662800E029BF /* Images.xcassets */; };
+		20F7147D1AF3662800E029BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F7147B1AF3662800E029BF /* MainMenu.xib */; };
+		20F714891AF3662800E029BF /* MacRemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F714881AF3662800E029BF /* MacRemoteTests.swift */; };
+		20F714951AF3C61700E029BF /* MRMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F714941AF3C61700E029BF /* MRMenu.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20F714831AF3662800E029BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20F7146A1AF3662800E029BF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20F714711AF3662800E029BF;
+			remoteInfo = MacRemote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20F714721AF3662800E029BF /* MacRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F714761AF3662800E029BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20F714771AF3662800E029BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20F714791AF3662800E029BF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		20F7147C1AF3662800E029BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		20F714821AF3662800E029BF /* MacRemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacRemoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		20F714871AF3662800E029BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20F714881AF3662800E029BF /* MacRemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacRemoteTests.swift; sourceTree = "<group>"; };
+		20F714941AF3C61700E029BF /* MRMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRMenu.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20F7146F1AF3662800E029BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20F7147F1AF3662800E029BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20F714691AF3662800E029BF = {
+			isa = PBXGroup;
+			children = (
+				20F714741AF3662800E029BF /* MacRemote */,
+				20F714851AF3662800E029BF /* MacRemoteTests */,
+				20F714731AF3662800E029BF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20F714731AF3662800E029BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20F714721AF3662800E029BF /* MacRemote.app */,
+				20F714821AF3662800E029BF /* MacRemoteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20F714741AF3662800E029BF /* MacRemote */ = {
+			isa = PBXGroup;
+			children = (
+				20F714771AF3662800E029BF /* AppDelegate.swift */,
+				20F714941AF3C61700E029BF /* MRMenu.swift */,
+				20F714791AF3662800E029BF /* Images.xcassets */,
+				20F7147B1AF3662800E029BF /* MainMenu.xib */,
+				20F714751AF3662800E029BF /* Supporting Files */,
+			);
+			path = MacRemote;
+			sourceTree = "<group>";
+		};
+		20F714751AF3662800E029BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20F714761AF3662800E029BF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20F714851AF3662800E029BF /* MacRemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				20F714881AF3662800E029BF /* MacRemoteTests.swift */,
+				20F714861AF3662800E029BF /* Supporting Files */,
+			);
+			path = MacRemoteTests;
+			sourceTree = "<group>";
+		};
+		20F714861AF3662800E029BF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20F714871AF3662800E029BF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20F714711AF3662800E029BF /* MacRemote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20F7148C1AF3662800E029BF /* Build configuration list for PBXNativeTarget "MacRemote" */;
+			buildPhases = (
+				20F7146E1AF3662800E029BF /* Sources */,
+				20F7146F1AF3662800E029BF /* Frameworks */,
+				20F714701AF3662800E029BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacRemote;
+			productName = MacRemote;
+			productReference = 20F714721AF3662800E029BF /* MacRemote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20F714811AF3662800E029BF /* MacRemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20F7148F1AF3662800E029BF /* Build configuration list for PBXNativeTarget "MacRemoteTests" */;
+			buildPhases = (
+				20F7147E1AF3662800E029BF /* Sources */,
+				20F7147F1AF3662800E029BF /* Frameworks */,
+				20F714801AF3662800E029BF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20F714841AF3662800E029BF /* PBXTargetDependency */,
+			);
+			name = MacRemoteTests;
+			productName = MacRemoteTests;
+			productReference = 20F714821AF3662800E029BF /* MacRemoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20F7146A1AF3662800E029BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Tom Hu";
+				TargetAttributes = {
+					20F714711AF3662800E029BF = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					20F714811AF3662800E029BF = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 20F714711AF3662800E029BF;
+					};
+				};
+			};
+			buildConfigurationList = 20F7146D1AF3662800E029BF /* Build configuration list for PBXProject "MacRemote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20F714691AF3662800E029BF;
+			productRefGroup = 20F714731AF3662800E029BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20F714711AF3662800E029BF /* MacRemote */,
+				20F714811AF3662800E029BF /* MacRemoteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20F714701AF3662800E029BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20F7147A1AF3662800E029BF /* Images.xcassets in Resources */,
+				20F7147D1AF3662800E029BF /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20F714801AF3662800E029BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20F7146E1AF3662800E029BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20F714781AF3662800E029BF /* AppDelegate.swift in Sources */,
+				20F714951AF3C61700E029BF /* MRMenu.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20F7147E1AF3662800E029BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20F714891AF3662800E029BF /* MacRemoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20F714841AF3662800E029BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20F714711AF3662800E029BF /* MacRemote */;
+			targetProxy = 20F714831AF3662800E029BF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		20F7147B1AF3662800E029BF /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20F7147C1AF3662800E029BF /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20F7148A1AF3662800E029BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20F7148B1AF3662800E029BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		20F7148D1AF3662800E029BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MacRemote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		20F7148E1AF3662800E029BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = MacRemote/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		20F714901AF3662800E029BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MacRemoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacRemote.app/Contents/MacOS/MacRemote";
+			};
+			name = Debug;
+		};
+		20F714911AF3662800E029BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MacRemoteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacRemote.app/Contents/MacOS/MacRemote";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20F7146D1AF3662800E029BF /* Build configuration list for PBXProject "MacRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20F7148A1AF3662800E029BF /* Debug */,
+				20F7148B1AF3662800E029BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20F7148C1AF3662800E029BF /* Build configuration list for PBXNativeTarget "MacRemote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20F7148D1AF3662800E029BF /* Debug */,
+				20F7148E1AF3662800E029BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		20F7148F1AF3662800E029BF /* Build configuration list for PBXNativeTarget "MacRemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20F714901AF3662800E029BF /* Debug */,
+				20F714911AF3662800E029BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20F7146A1AF3662800E029BF /* Project object */;
+}
