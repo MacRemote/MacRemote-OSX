@@ -12,8 +12,7 @@ import AppKit
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
-    var statusItem: NSStatusItem!
+    private var statusItem: NSStatusItem!
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         NSLog("Running...")

@@ -9,17 +9,22 @@
 import Cocoa
 
 class MRMenu: NSMenu {
+    
+    private var preferencesWindowController: MRPreferencesWindowController?;
+    
     override init(title aTitle: String) {
         super.init(title: aTitle)
         
         configureMenuItems()
+        
+        self.preferencesWindowController = MRPreferencesWindowController(windowNibName: "MRPreferencesWindowController");
     }
 
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - UI Methods
+    // MARK: - UI Methods
     private func configureMenuItems() {
         // Create menu items
         var preferencesMenuItem: NSMenuItem = NSMenuItem(title: "Open Mac Remote Preferences...", action: Selector("didClickPreferencesMenuItem:"), keyEquivalent: "")
@@ -33,7 +38,7 @@ class MRMenu: NSMenu {
         self.addItem(quitMenuItem)
     }
     
-    //MARK: - Actions
+    // MARK: - Actions
     func didClickQuitMenuItem(sender: AnyObject?) {
         NSLog("Did click quit menu item")
         NSApplication.sharedApplication().terminate(nil)
@@ -41,5 +46,8 @@ class MRMenu: NSMenu {
     
     func didClickPreferencesMenuItem(sender: AnyObject?) {
         NSLog("Did click preferences menu item")
+        NSApp.activateIgnoringOtherApps(true);
+        self.preferencesWindowController?.showWindow(self);
     }
+    
 }

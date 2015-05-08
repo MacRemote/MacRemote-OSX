@@ -12,6 +12,8 @@
 		20F7147D1AF3662800E029BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F7147B1AF3662800E029BF /* MainMenu.xib */; };
 		20F714891AF3662800E029BF /* MacRemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F714881AF3662800E029BF /* MacRemoteTests.swift */; };
 		20F714951AF3C61700E029BF /* MRMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F714941AF3C61700E029BF /* MRMenu.swift */; };
+		20F867711AFC7B1F00BE547F /* MRPreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F8676F1AFC7B1F00BE547F /* MRPreferencesWindowController.swift */; };
+		20F867721AFC7B1F00BE547F /* MRPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F867701AFC7B1F00BE547F /* MRPreferencesWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		20F714871AF3662800E029BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20F714881AF3662800E029BF /* MacRemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacRemoteTests.swift; sourceTree = "<group>"; };
 		20F714941AF3C61700E029BF /* MRMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRMenu.swift; sourceTree = "<group>"; };
+		20F8676F1AFC7B1F00BE547F /* MRPreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRPreferencesWindowController.swift; sourceTree = "<group>"; };
+		20F867701AFC7B1F00BE547F /* MRPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRPreferencesWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			children = (
 				20F714771AF3662800E029BF /* AppDelegate.swift */,
 				20F714941AF3C61700E029BF /* MRMenu.swift */,
+				20F8676F1AFC7B1F00BE547F /* MRPreferencesWindowController.swift */,
+				20F867701AFC7B1F00BE547F /* MRPreferencesWindowController.xib */,
 				20F714791AF3662800E029BF /* Images.xcassets */,
 				20F7147B1AF3662800E029BF /* MainMenu.xib */,
 				20F714751AF3662800E029BF /* Supporting Files */,
@@ -191,6 +197,7 @@
 			files = (
 				20F7147A1AF3662800E029BF /* Images.xcassets in Resources */,
 				20F7147D1AF3662800E029BF /* MainMenu.xib in Resources */,
+				20F867721AFC7B1F00BE547F /* MRPreferencesWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +217,7 @@
 			files = (
 				20F714781AF3662800E029BF /* AppDelegate.swift in Sources */,
 				20F714951AF3C61700E029BF /* MRMenu.swift in Sources */,
+				20F867711AFC7B1F00BE547F /* MRPreferencesWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +405,7 @@
 				20F7148E1AF3662800E029BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		20F7148F1AF3662800E029BF /* Build configuration list for PBXNativeTarget "MacRemoteTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +414,7 @@
 				20F714911AF3662800E029BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
