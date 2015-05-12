@@ -10,7 +10,7 @@ import Cocoa
 import AppKit
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSNetServiceDelegate {
 
     private var statusItem: NSStatusItem!
 
@@ -22,11 +22,64 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.statusItem.image = NSImage(named: "bat23")
         self.statusItem.highlightMode = true
         self.statusItem.menu = MRMenu(title: "Test")
+        
+        // Configure Bonjour
+        self.configureBoujour();
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
         // Insert code here to tear down your application
         NSLog("Terminating...")
+    }
+    
+    // MARK: Bonjour
+    private func configureBoujour() {
+        var bonjourService: NSNetService = NSNetService(domain: "local.", type: "_http._tcp.", name: "MacRemoteWebService", port: 0);
+        bonjourService.delegate = self;
+        bonjourService.publishWithOptions(NSNetServiceOptions.ListenForConnections);
+    }
+    
+    // MARK: NSNetServiceDelegate
+    func netServiceWillPublish(sender: NSNetService) {
+        NSLog("Net Service Will Publish!");
+    }
+    
+    func netServiceDidPublish(sender: NSNetService) {
+        NSLog("Net Service Did Publish!");
+        NSLog("Port: %d", sender.port);
+    }
+    
+    func netService(sender: NSNetService, didNotPublish errorDict: [NSObject : AnyObject]) {
+        NSLog("Net Service Did Not Publish!");
+        NSLog("Error: %@", errorDict);
+    }
+    
+    func netServiceWillResolve(sender: NSNetService) {
+        NSLog("Net Service Will Resolve!");
+    }
+
+    func netServiceDidResolveAddress(sender: NSNetService) {
+        NSLog("Net Service Did Resolve Address!");
+    }
+    
+    func netService(sender: NSNetService, didNotResolve errorDict: [NSObject : AnyObject]) {
+        NSLog("Net Service Did Not Resolve!");
+        NSLog("Error: %@", errorDict);
+    }
+    
+    func netServiceDidStop(sender: NSNetService) {
+        NSLog("Net Service Did Stop!");
+    }
+    
+    func netService(sender: NSNetService, didUpdateTXTRecordData data: NSData) {
+        NSLog("Net Service Did Update TXT Record Data!");
+        NSLog("Data: %@", data);
+    }
+    
+    func netService(sender: NSNetService, didAcceptConnectionWithInputStream inputStream: NSInputStream, outputStream: NSOutputStream) {
+        NSLog("Net Service Did Accept Connection With Input Stream!");
+        NSLog("Input Stream: ", inputStream);
+        NSLog("Output Stream: ", outputStream);
     }
 
 }
