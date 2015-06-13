@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20E05CCE1B2B17DF0073104B /* MRBonjourHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E05CCD1B2B17DF0073104B /* MRBonjourHandler.swift */; };
+		20E05D0A1B2BF2670073104B /* MRRemoteControlServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E05D091B2BF2670073104B /* MRRemoteControlServer.swift */; };
 		20F714781AF3662800E029BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F714771AF3662800E029BF /* AppDelegate.swift */; };
 		20F7147A1AF3662800E029BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F714791AF3662800E029BF /* Images.xcassets */; };
 		20F7147D1AF3662800E029BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F7147B1AF3662800E029BF /* MainMenu.xib */; };
@@ -14,6 +16,7 @@
 		20F714951AF3C61700E029BF /* MRMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F714941AF3C61700E029BF /* MRMenu.swift */; };
 		20F867711AFC7B1F00BE547F /* MRPreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F8676F1AFC7B1F00BE547F /* MRPreferencesWindowController.swift */; };
 		20F867721AFC7B1F00BE547F /* MRPreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F867701AFC7B1F00BE547F /* MRPreferencesWindowController.xib */; };
+		C94AB9CB38FDCA7123ECC801 /* Pods_MacRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D6851015697E27AC14E417 /* Pods_MacRemote.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20E05CCD1B2B17DF0073104B /* MRBonjourHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRBonjourHandler.swift; sourceTree = "<group>"; };
+		20E05D091B2BF2670073104B /* MRRemoteControlServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRRemoteControlServer.swift; sourceTree = "<group>"; };
 		20F714721AF3662800E029BF /* MacRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F714761AF3662800E029BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20F714771AF3662800E029BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		20F714941AF3C61700E029BF /* MRMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRMenu.swift; sourceTree = "<group>"; };
 		20F8676F1AFC7B1F00BE547F /* MRPreferencesWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRPreferencesWindowController.swift; sourceTree = "<group>"; };
 		20F867701AFC7B1F00BE547F /* MRPreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRPreferencesWindowController.xib; sourceTree = "<group>"; };
+		32D6851015697E27AC14E417 /* Pods_MacRemote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MacRemote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DE6A0610D21FD5BA9A2E065 /* Pods-MacRemote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacRemote.release.xcconfig"; path = "Pods/Target Support Files/Pods-MacRemote/Pods-MacRemote.release.xcconfig"; sourceTree = "<group>"; };
+		E3DE431FE5858E20D4BEA370 /* Pods-MacRemote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MacRemote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MacRemote/Pods-MacRemote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C94AB9CB38FDCA7123ECC801 /* Pods_MacRemote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +67,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20E05D031B2BD25B0073104B /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				20F8676F1AFC7B1F00BE547F /* MRPreferencesWindowController.swift */,
+				20F867701AFC7B1F00BE547F /* MRPreferencesWindowController.xib */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		20E05D081B2BF2340073104B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				20E05D031B2BD25B0073104B /* Preferences */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		20F714691AF3662800E029BF = {
 			isa = PBXGroup;
 			children = (
 				20F714741AF3662800E029BF /* MacRemote */,
 				20F714851AF3662800E029BF /* MacRemoteTests */,
 				20F714731AF3662800E029BF /* Products */,
+				86B1066EFDDB67E9FA9327CF /* Pods */,
+				9711C8714C7957E54507CE07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,8 +109,9 @@
 			children = (
 				20F714771AF3662800E029BF /* AppDelegate.swift */,
 				20F714941AF3C61700E029BF /* MRMenu.swift */,
-				20F8676F1AFC7B1F00BE547F /* MRPreferencesWindowController.swift */,
-				20F867701AFC7B1F00BE547F /* MRPreferencesWindowController.xib */,
+				20E05CCD1B2B17DF0073104B /* MRBonjourHandler.swift */,
+				20E05D091B2BF2670073104B /* MRRemoteControlServer.swift */,
+				20E05D081B2BF2340073104B /* ViewControllers */,
 				20F714791AF3662800E029BF /* Images.xcassets */,
 				20F7147B1AF3662800E029BF /* MainMenu.xib */,
 				20F714751AF3662800E029BF /* Supporting Files */,
@@ -115,6 +144,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		86B1066EFDDB67E9FA9327CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3DE431FE5858E20D4BEA370 /* Pods-MacRemote.debug.xcconfig */,
+				5DE6A0610D21FD5BA9A2E065 /* Pods-MacRemote.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9711C8714C7957E54507CE07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32D6851015697E27AC14E417 /* Pods_MacRemote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20F7148C1AF3662800E029BF /* Build configuration list for PBXNativeTarget "MacRemote" */;
 			buildPhases = (
+				2AA74EC5944D878E36F44D98 /* Check Pods Manifest.lock */,
 				20F7146E1AF3662800E029BF /* Sources */,
 				20F7146F1AF3662800E029BF /* Frameworks */,
 				20F714701AF3662800E029BF /* Resources */,
+				62FA8B7A932E0FBB2D6534BF /* Embed Pods Frameworks */,
+				7004A77A7BF98B1AFDBF6AFD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,12 +259,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AA74EC5944D878E36F44D98 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		62FA8B7A932E0FBB2D6534BF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacRemote/Pods-MacRemote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7004A77A7BF98B1AFDBF6AFD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MacRemote/Pods-MacRemote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20F7146E1AF3662800E029BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20E05D0A1B2BF2670073104B /* MRRemoteControlServer.swift in Sources */,
 				20F714781AF3662800E029BF /* AppDelegate.swift in Sources */,
+				20E05CCE1B2B17DF0073104B /* MRBonjourHandler.swift in Sources */,
 				20F714951AF3C61700E029BF /* MRMenu.swift in Sources */,
 				20F867711AFC7B1F00BE547F /* MRPreferencesWindowController.swift in Sources */,
 			);
@@ -330,6 +429,7 @@
 		};
 		20F7148D1AF3662800E029BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3DE431FE5858E20D4BEA370 /* Pods-MacRemote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -341,6 +441,7 @@
 		};
 		20F7148E1AF3662800E029BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DE6A0610D21FD5BA9A2E065 /* Pods-MacRemote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
