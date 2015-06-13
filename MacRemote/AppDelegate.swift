@@ -13,7 +13,7 @@ import AppKit
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     private var statusItem: NSStatusItem!
-    private lazy var remoteControlServer: MRRemoteControlServer! = MRRemoteControlServer()
+    private var remoteControlServer: MRRemoteControlServer!
 
     // MARK: - Application Life Circle
     
@@ -22,6 +22,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         self.configureStatusItem()
         
+        self.remoteControlServer = MRRemoteControlServer.sharedServer
         self.remoteControlServer.startBroadCasting()
     }
 

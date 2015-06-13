@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AppKit
 
 class MRMenu: NSMenu {
     

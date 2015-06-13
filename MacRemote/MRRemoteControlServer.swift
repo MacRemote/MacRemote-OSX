@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import AppKit
 import CocoaAsyncSocket
 
 enum PacketTag: Int {
@@ -16,13 +17,20 @@ enum PacketTag: Int {
 
 class MRRemoteControlServer: NSObject, GCDAsyncSocketDelegate {
     
+    class var sharedServer: MRRemoteControlServer {
+        struct Static {
+            static let server: MRRemoteControlServer = MRRemoteControlServer()
+        }
+        return Static.server
+    }
+    
     private var service: NSNetService!
     private var socket: GCDAsyncSocket!
     
     private lazy var bounjourHandler: MRBonjourHandler! = MRBonjourHandler()
     
     // MARK: - Life Circle
-    override init() {
+    private override init() {
         super.init()
         
         self.startBroadCasting()
@@ -39,6 +47,48 @@ class MRRemoteControlServer: NSObject, GCDAsyncSocketDelegate {
         } else {
             println("Unable to create socket. Error \(error)")
         }
+    }
+    
+    private func parseHeader(data: NSData) -> UInt {
+        var out: UInt = 0
+        data.getBytes(&out, length: sizeof(UInt))
+        return out
+    }
+    
+    // MARK: - GCDAsyncSocketDelegate
+    
+    func socket(sock: GCDAsyncSocket!, didAcceptNewSocket newSocket: GCDAsyncSocket!) {
+        println("Accepted new socket")
+        self.socket = newSocket
+        self.socket.readDataToLength(UInt(sizeof(UInt)), withTimeout: -1.0, tag: PacketTag.Header.rawValue)
+    }
+    
+    func socketDidDisconnect(sock: GCDAsyncSocket!, withError err: NSError!) {
+        println("Disconnected: error \(err)")
+    }
+    
+    func socket(sock: GCDAsyncSocket!, didReadData data: NSData!, withTag tag: Int) {
+        println("Read data")
+        
+        if data.length == sizeof(UInt) {
+            // Header
+            let bodyLength: UInt = self.parseHeader(data)
+            sock.readDataToLength(bodyLength, withTimeout: -1, tag: PacketTag.Body.rawValue)
+        } else {
+            // Body
+            if let body = NSString(data: data, encoding: NSUTF8StringEncoding) {
+                println("Body: \(body)")
+                
+                var event: NSEvent = NSEvent.mouseEventWithType(NSEventType.MouseMoved, location: NSPoint(x: 100, y: 100), modifierFlags: nil, timestamp: 1, windowNumber: 0, context: NSGraphicsContext.currentContext(), eventNumber: 1, clickCount: 1, pressure: 1.0)!
+                NSApplication.sharedApplication().sendEvent(event)
+            }
+            
+            sock.readDataToLength(UInt(sizeof(UInt)), withTimeout: -1, tag: PacketTag.Header.rawValue)
+        }
+    }
+    
+    func socket(sock: GCDAsyncSocket!, didWriteDataWithTag tag: Int) {
+        println("Wrote data with tag: \(tag)")
     }
     
 }
