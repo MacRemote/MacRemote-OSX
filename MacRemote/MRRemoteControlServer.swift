@@ -79,8 +79,8 @@ class MRRemoteControlServer: NSObject, GCDAsyncSocketDelegate {
             if let body = NSString(data: data, encoding: NSUTF8StringEncoding) {
                 println("Body: \(body)")
                 
-                var event: NSEvent = NSEvent.mouseEventWithType(NSEventType.MouseMoved, location: NSPoint(x: 100, y: 100), modifierFlags: nil, timestamp: 1, windowNumber: 0, context: NSGraphicsContext.currentContext(), eventNumber: 1, clickCount: 1, pressure: 1.0)!
-                NSApplication.sharedApplication().sendEvent(event)
+                // Handle ios notification
+                
             }
             
             sock.readDataToLength(UInt(sizeof(UInt)), withTimeout: -1, tag: PacketTag.Header.rawValue)

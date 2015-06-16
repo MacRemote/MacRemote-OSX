@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20A5A1381B304D5F007C0176 /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A5A1361B304D5F007C0176 /* ISSoundAdditions.m */; };
+		20A5A1391B304D5F007C0176 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 20A5A1371B304D5F007C0176 /* README.md */; };
+		20A5A13E1B304EBB007C0176 /* MRSystemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5A13D1B304EBB007C0176 /* MRSystemController.swift */; };
+		20A5A1441B305630007C0176 /* MREvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5A1431B305630007C0176 /* MREvent.swift */; };
 		20E05CCE1B2B17DF0073104B /* MRBonjourHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E05CCD1B2B17DF0073104B /* MRBonjourHandler.swift */; };
 		20E05D0A1B2BF2670073104B /* MRRemoteControlServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E05D091B2BF2670073104B /* MRRemoteControlServer.swift */; };
 		20F714781AF3662800E029BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F714771AF3662800E029BF /* AppDelegate.swift */; };
@@ -30,6 +34,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20A5A1351B304D5F007C0176 /* ISSoundAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSoundAdditions.h; sourceTree = "<group>"; };
+		20A5A1361B304D5F007C0176 /* ISSoundAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSoundAdditions.m; sourceTree = "<group>"; };
+		20A5A1371B304D5F007C0176 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		20A5A13A1B304DE1007C0176 /* MacRemote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacRemote-Bridging-Header.h"; sourceTree = "<group>"; };
+		20A5A13D1B304EBB007C0176 /* MRSystemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRSystemController.swift; sourceTree = "<group>"; };
+		20A5A1431B305630007C0176 /* MREvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MREvent.swift; sourceTree = "<group>"; };
 		20E05CCD1B2B17DF0073104B /* MRBonjourHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRBonjourHandler.swift; sourceTree = "<group>"; };
 		20E05D091B2BF2670073104B /* MRRemoteControlServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRRemoteControlServer.swift; sourceTree = "<group>"; };
 		20F714721AF3662800E029BF /* MacRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +77,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20A5A1321B304D23007C0176 /* SystemControl */ = {
+			isa = PBXGroup;
+			children = (
+				20A5A13D1B304EBB007C0176 /* MRSystemController.swift */,
+			);
+			name = SystemControl;
+			sourceTree = "<group>";
+		};
+		20A5A1331B304D41007C0176 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				20A5A1341B304D5F007C0176 /* ISSoundAdditions */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		20A5A1341B304D5F007C0176 /* ISSoundAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				20A5A1351B304D5F007C0176 /* ISSoundAdditions.h */,
+				20A5A1361B304D5F007C0176 /* ISSoundAdditions.m */,
+				20A5A1371B304D5F007C0176 /* README.md */,
+			);
+			path = ISSoundAdditions;
+			sourceTree = "<group>";
+		};
+		20A5A13F1B304F56007C0176 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20F714941AF3C61700E029BF /* MRMenu.swift */,
+				20F7147B1AF3662800E029BF /* MainMenu.xib */,
+				20F714791AF3662800E029BF /* Images.xcassets */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		20A5A1401B304F5A007C0176 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20A5A1321B304D23007C0176 /* SystemControl */,
+				20E05D091B2BF2670073104B /* MRRemoteControlServer.swift */,
+				20A5A1431B305630007C0176 /* MREvent.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		20E05D031B2BD25B0073104B /* Preferences */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,12 +164,11 @@
 			isa = PBXGroup;
 			children = (
 				20F714771AF3662800E029BF /* AppDelegate.swift */,
-				20F714941AF3C61700E029BF /* MRMenu.swift */,
 				20E05CCD1B2B17DF0073104B /* MRBonjourHandler.swift */,
-				20E05D091B2BF2670073104B /* MRRemoteControlServer.swift */,
+				20A5A1331B304D41007C0176 /* External */,
 				20E05D081B2BF2340073104B /* ViewControllers */,
-				20F714791AF3662800E029BF /* Images.xcassets */,
-				20F7147B1AF3662800E029BF /* MainMenu.xib */,
+				20A5A1401B304F5A007C0176 /* Model */,
+				20A5A13F1B304F56007C0176 /* View */,
 				20F714751AF3662800E029BF /* Supporting Files */,
 			);
 			path = MacRemote;
@@ -123,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				20F714761AF3662800E029BF /* Info.plist */,
+				20A5A13A1B304DE1007C0176 /* MacRemote-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -315,8 +371,12 @@
 				20E05D0A1B2BF2670073104B /* MRRemoteControlServer.swift in Sources */,
 				20F714781AF3662800E029BF /* AppDelegate.swift in Sources */,
 				20E05CCE1B2B17DF0073104B /* MRBonjourHandler.swift in Sources */,
+				20A5A13E1B304EBB007C0176 /* MRSystemController.swift in Sources */,
+				20A5A1391B304D5F007C0176 /* README.md in Sources */,
 				20F714951AF3C61700E029BF /* MRMenu.swift in Sources */,
+				20A5A1441B305630007C0176 /* MREvent.swift in Sources */,
 				20F867711AFC7B1F00BE547F /* MRPreferencesWindowController.swift in Sources */,
+				20A5A1381B304D5F007C0176 /* ISSoundAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +496,7 @@
 				INFOPLIST_FILE = MacRemote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MacRemote/MacRemote-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -448,6 +509,7 @@
 				INFOPLIST_FILE = MacRemote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MacRemote/MacRemote-Bridging-Header.h";
 			};
 			name = Release;
 		};
