@@ -22,7 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         self.configureStatusItem()
         
-        self.remoteControlServer = MRRemoteControlServer.sharedServer
+//        self.remoteControlServer = MRRemoteControlServer.sharedServer
+        self.remoteControlServer = MRRemoteControlServer()
         self.remoteControlServer.startBroadCasting()
     }
 

@@ -30,10 +30,8 @@ class MRRemoteControlServer: NSObject, GCDAsyncSocketDelegate {
     private lazy var bounjourHandler: MRBonjourHandler! = MRBonjourHandler()
     
     // MARK: - Life Circle
-    private override init() {
+    override init() {
         super.init()
-        
-        self.startBroadCasting()
     }
     
     func startBroadCasting() {
