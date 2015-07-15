@@ -8,12 +8,12 @@
 
 import Cocoa
 import AppKit
+import MRFoundation
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, MRRemoteControlServerDelegate {
 
     private var statusItem: NSStatusItem!
-    private var remoteControlServer: MRRemoteControlServer!
 
     // MARK: - Application Life Circle
     
@@ -22,9 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         self.configureStatusItem()
         
-//        self.remoteControlServer = MRRemoteControlServer.sharedServer
-        self.remoteControlServer = MRRemoteControlServer()
-        self.remoteControlServer.startBroadCasting()
+        MRRemoteControlServer.sharedServer.delegate = self
+        MRRemoteControlServer.sharedServer.startBroadCasting()
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -39,6 +38,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.statusItem.image = NSImage(named: "bat23")
         self.statusItem.highlightMode = true
         self.statusItem.menu = MRMenu(title: "Test")
+    }
+    
+    // MARK: - MRRemoteControlServerDelegate
+    
+    func remoteControlServerDidReceiveEvent(event: MREvent) {
+        MRSystemController.dispatchEvent(event)
     }
 
 }

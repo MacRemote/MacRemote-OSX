@@ -7,9 +7,22 @@
 //
 
 import Cocoa
+import MRFoundation
 
 class MRSystemController: NSObject {
-    
-    
+
+    class func dispatchEvent(event: MREvent) {
+        var eventType: MREventType = event.eventType
+        switch eventType {
+        case MREventType.SoundUp:
+            MRKeyboardController.soundUp()
+            println("Sound Up")
+        case MREventType.SoundDown:
+            MRKeyboardController.soundDown()
+            println("Sound Down")
+        default:
+            println("Default")
+        }
+    }
     
 }

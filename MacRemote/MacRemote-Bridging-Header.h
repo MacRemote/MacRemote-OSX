@@ -10,5 +10,6 @@
 #define MacRemote_MacRemote_Bridging_Header_h
 
 #import "ISSoundAdditions.h"
+#import "MRKeyboardController.h"
 
 #endif

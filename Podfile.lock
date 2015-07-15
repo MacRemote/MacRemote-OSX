@@ -1,10 +1,17 @@
 PODS:
   - CocoaAsyncSocket (7.4.1)
+  - MRFoundation (0.1):
+    - CocoaAsyncSocket (~> 7.0)
 
 DEPENDENCIES:
-  - CocoaAsyncSocket
+  - MRFoundation (from `../Remote Foundation/`)
+
+EXTERNAL SOURCES:
+  MRFoundation:
+    :path: "../Remote Foundation/"
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 7cbf214b27f8e7f7574db6a3fd96352ffaed433d
+  MRFoundation: b338fc56e00d743f6c64a55d9520f19e9adc23e9
 
 COCOAPODS: 0.37.2
