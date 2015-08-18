@@ -14,12 +14,27 @@ class MRSystemController: NSObject {
     class func dispatchEvent(event: MREvent) {
         var eventType: MREventType = event.eventType
         switch eventType {
+        // Sound
         case MREventType.SoundUp:
             MRKeyboardController.soundUp()
-            println("Sound Up")
         case MREventType.SoundDown:
             MRKeyboardController.soundDown()
-            println("Sound Down")
+        case MREventType.SoundMute:
+            MRKeyboardController.soundMute()
+            
+        // Brightness
+        case MREventType.BrightnessUp:
+            MRKeyboardController.brightnessUp()
+        case MREventType.BrightnessDown:
+            MRKeyboardController.brightnessDown()
+        
+        // Illumination
+        case MREventType.IlluminationUp:
+            MRKeyboardController.illuminationUp()
+        case MREventType.IlluminationDown:
+            MRKeyboardController.illuminationDown()
+        case MREventType.IlluminationToggle:
+            MRKeyboardController.illuminationToggle()
         default:
             println("Default")
         }

@@ -12,6 +12,7 @@
 		20A5A1381B304D5F007C0176 /* ISSoundAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20A5A1361B304D5F007C0176 /* ISSoundAdditions.m */; };
 		20A5A1391B304D5F007C0176 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 20A5A1371B304D5F007C0176 /* README.md */; };
 		20A5A13E1B304EBB007C0176 /* MRSystemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5A13D1B304EBB007C0176 /* MRSystemController.swift */; };
+		20D22D6F1B836F320015D812 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D22D6E1B836F320015D812 /* Preferences.swift */; };
 		20F714781AF3662800E029BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F714771AF3662800E029BF /* AppDelegate.swift */; };
 		20F7147A1AF3662800E029BF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20F714791AF3662800E029BF /* Images.xcassets */; };
 		20F7147D1AF3662800E029BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F7147B1AF3662800E029BF /* MainMenu.xib */; };
@@ -43,6 +44,7 @@
 		20A5A1371B304D5F007C0176 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		20A5A13A1B304DE1007C0176 /* MacRemote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacRemote-Bridging-Header.h"; sourceTree = "<group>"; };
 		20A5A13D1B304EBB007C0176 /* MRSystemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRSystemController.swift; sourceTree = "<group>"; };
+		20D22D6E1B836F320015D812 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 		20F714721AF3662800E029BF /* MacRemote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacRemote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F714761AF3662800E029BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20F714771AF3662800E029BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				20A5A1321B304D23007C0176 /* SystemControl */,
+				20D22D6E1B836F320015D812 /* Preferences.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				20F867711AFC7B1F00BE547F /* MRPreferencesWindowController.swift in Sources */,
 				20A5A1381B304D5F007C0176 /* ISSoundAdditions.m in Sources */,
 				20221ECB1B56961900D9854E /* MRKeyboardController.m in Sources */,
+				20D22D6F1B836F320015D812 /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

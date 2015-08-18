@@ -35,9 +35,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, MRRemoteControlServerDelegat
     
     private func configureStatusItem() {
         self.statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1) // 本来应该用 NSVariableStatusItemLength，但是会引起linker error，只好换成-1，不清楚具体为什么
-        self.statusItem.image = NSImage(named: "bat23")
-        self.statusItem.highlightMode = true
         self.statusItem.menu = MRMenu(title: "Test")
+        
+        self.statusItem.button?.image = NSImage(named: "bat23")
     }
     
     // MARK: - MRRemoteControlServerDelegate
