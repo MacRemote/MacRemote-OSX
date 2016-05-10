@@ -12,7 +12,7 @@ import MRFoundation
 class MRSystemController: NSObject {
 
     class func dispatchEvent(event: MREvent) {
-        var eventType: MREventType = event.eventType
+        let eventType: MREventType = event.eventType
         switch eventType {
         // Sound
         case MREventType.SoundUp:
@@ -36,7 +36,7 @@ class MRSystemController: NSObject {
         case MREventType.IlluminationToggle:
             MRKeyboardController.illuminationToggle()
         default:
-            println("Default")
+            print("Default")
         }
     }
     

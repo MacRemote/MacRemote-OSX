@@ -14,9 +14,9 @@
 #define kKeyDOWN 0xa
 #define kKeyUP 0xb
 
-typedef NS_ENUM(CGEventType, MROSEventType) {
-    MROSEventTypeKeyUp = NX_KEYUP,
-    MROSEventTypeKeyDown = NX_KEYDOWN,
+typedef NS_ENUM(uint32, MROSEventType) {
+    MROSEventTypeKeyUp = kCGEventKeyUp,
+    MROSEventTypeKeyDown = kCGEventKeyDown,
 };
 
 void hitSpecialKey(MRKey key);
@@ -25,8 +25,8 @@ void doHitSpecialKey(MRKey key, MROSEventType eventType);
 #pragma mark - Implementation
 
 void hitSpecialKey(MRKey key) {
-    doHitSpecialKey(key, kCGEventKeyDown);
-    doHitSpecialKey(key, kCGEventKeyUp);
+    doHitSpecialKey(key, MROSEventTypeKeyDown);
+    doHitSpecialKey(key, MROSEventTypeKeyUp);
 }
 
 void doHitSpecialKey(MRKey key, MROSEventType eventType) {

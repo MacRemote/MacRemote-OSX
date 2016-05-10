@@ -20,12 +20,17 @@ class MRPreferencesWindowController: NSWindowController {
     }
     
     // MARK: - UI Methods
-    
+
     private func configurePreferenceWindow() {
         if let _window = self.window {
             _window.opaque = false
             _window.alphaValue = 0.9
-            _window.titlebarAppearsTransparent = true
+            if #available(OSX 10.10, *) {
+                _window.titlebarAppearsTransparent = true
+            } else {
+                // Fallback on earlier versions
+                
+            }
         }
     }
     

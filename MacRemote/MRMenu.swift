@@ -28,9 +28,9 @@ class MRMenu: NSMenu {
     // MARK: - UI Methods
     private func configureMenuItems() {
         // Create menu items
-        var preferencesMenuItem: NSMenuItem = NSMenuItem(title: "Open Mac Remote Preferences...", action: Selector("didClickPreferencesMenuItem:"), keyEquivalent: "")
+        let preferencesMenuItem: NSMenuItem = NSMenuItem(title: "Open Mac Remote Preferences...", action: Selector("didClickPreferencesMenuItem:"), keyEquivalent: "")
         preferencesMenuItem.target = self
-        var quitMenuItem: NSMenuItem = NSMenuItem(title: "Quit", action: Selector("didClickQuitMenuItem:"), keyEquivalent: "")
+        let quitMenuItem: NSMenuItem = NSMenuItem(title: "Quit", action: Selector("didClickQuitMenuItem:"), keyEquivalent: "")
         quitMenuItem.target = self
         
         // Add to menu
