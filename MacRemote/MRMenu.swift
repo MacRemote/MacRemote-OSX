@@ -26,11 +26,12 @@ class MRMenu: NSMenu {
     }
     
     // MARK: - UI Methods
+
     private func configureMenuItems() {
         // Create menu items
-        let preferencesMenuItem: NSMenuItem = NSMenuItem(title: "Open Mac Remote Preferences...", action: Selector("didClickPreferencesMenuItem:"), keyEquivalent: "")
+        let preferencesMenuItem: NSMenuItem = NSMenuItem(title: "Open Mac Remote Preferences...", action: #selector(MRMenu.didClickPreferencesMenuItem(_:)), keyEquivalent: "")
         preferencesMenuItem.target = self
-        let quitMenuItem: NSMenuItem = NSMenuItem(title: "Quit", action: Selector("didClickQuitMenuItem:"), keyEquivalent: "")
+        let quitMenuItem: NSMenuItem = NSMenuItem(title: "Quit", action: #selector(MRMenu.didClickQuitMenuItem(_:)), keyEquivalent: "")
         quitMenuItem.target = self
         
         // Add to menu
@@ -40,6 +41,7 @@ class MRMenu: NSMenu {
     }
     
     // MARK: - Actions
+
     func didClickQuitMenuItem(sender: AnyObject?) {
         NSLog("Did click quit menu item")
         NSApplication.sharedApplication().terminate(nil)

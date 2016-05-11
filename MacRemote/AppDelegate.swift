@@ -16,12 +16,12 @@ class AppDelegate: NSObject, NSApplicationDelegate, MRRemoteControlServerDelegat
     private var statusItem: NSStatusItem!
 
     // MARK: - Application Life Circle
-    
+
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         print("Running...")
-        
+
         self.configureStatusItem()
-        
+
         MRRemoteControlServer.sharedServer.delegate = self
         MRRemoteControlServer.sharedServer.startBroadCasting()
     }
@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, MRRemoteControlServerDelegat
     }
 
     // MARK: - UI Methods
-    
+
     private func configureStatusItem() {
         self.statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1) // 本来应该用 NSVariableStatusItemLength，但是会引起linker error，只好换成-1，不清楚具体为什么
         self.statusItem.menu = MRMenu(title: "Test")
@@ -44,9 +44,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, MRRemoteControlServerDelegat
             self.statusItem.image = NSImage(named: "bat23")
         }
     }
-    
+
     // MARK: - MRRemoteControlServerDelegate
-    
+
     func remoteControlServerDidReceiveEvent(event: MREvent) {
         MRSystemController.dispatchEvent(event)
     }
