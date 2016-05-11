@@ -23,7 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, MRRemoteControlServerDelegat
         self.configureStatusItem()
 
         MRRemoteControlServer.sharedServer.delegate = self
-        MRRemoteControlServer.sharedServer.startBroadCasting()
+        MRRemoteControlServer.sharedServer.startBroadCasting(port: 25003)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
